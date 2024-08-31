@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        border: 2px solid;
+        background-color: blue;
+        height: 300px;
+        width: 300px;
+        margin-left: 550px;
+        margin-top: 130px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <button
+        style="margin-left: 90px; margin-top: 30px"
+        type="button"
+        onclick="generateOTP()"
+      >
+        generate OTP</button
+      ><br /><br />
+      <h1 id="show" style="margin-left: 80px; color: aqua"></h1>
+    </div>
+
+    <script>
+      function generateOTP() {
+        let n = Math.round(Math.random() * 1000000);
+        document.getElementById("show").innerHTML = n;
+      }
+    </script>
+  </body>
+</html>
